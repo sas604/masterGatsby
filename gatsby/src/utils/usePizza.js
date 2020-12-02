@@ -29,7 +29,6 @@ export default function usePizza({ pizzas, values }) {
   // this is the function that is run when someone submits the form
   async function submitOrder(e) {
     e.preventDefault();
-    console.log(e);
     setLoading(true);
     setError(null);
     setMessage(null);
@@ -47,7 +46,7 @@ export default function usePizza({ pizzas, values }) {
       {
         method: 'POST',
         headers: {
-          'Content-type': 'aplication/json',
+          'Content-type': 'application/json',
         },
         body: JSON.stringify(body),
       }
